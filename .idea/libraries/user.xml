@@ -1,0 +1,63 @@
+<component name="libraryTable">
+  <library name="user">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/user/mule-tests-functional-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/mule-example-loanbroker-esb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/abdera-0.4.0-incubating.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/jersey-core-1.1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/json-lib-2.2.1-jdk15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/jackson-core-asl-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/jaxen-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/geronimo-activation_1.0.2_spec-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/axiom-impl-1.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/mule-example-loanbroker-esn.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/mule-example-hello.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/jersey-server-1.1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/jersey-client-1.1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/mule-example-scripting.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/jsr311-api-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/mule-example-echo.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/asm-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/mule-example-loanbroker-common.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/mule-example-loanbroker-credit-agency.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/htmlparser-1.0.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/ezmorph-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/jettison-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/mule-example-stockquote.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/mule-example-errorhandler.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/jersey-json-1.1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/xalan-2.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/axiom-api-1.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/geronimo-stax-api_1.0_spec-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/junit-3.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/xmlunit-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/commons-logging-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/mule-example-loanbroker-bpm.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-workitems-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-transformer-smooks-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-decisiontables-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-verifier-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-mc-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-templates-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-bam-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-transformer-jaxb-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-core-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-ant-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-transformer-xstream-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-messenger-jms-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-process-task-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-persistence-jpa-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-transformer-jxls-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-clips-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-server-5.0.1.war!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-jsr94-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-compiler-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/drools-api-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/httpcore-4.1-alpha1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/httpclient-4.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/user/httpmime-4.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,43 @@
+10
+
+dir
+663
+svn+ssh://letourneau@developer.mitre.org/svnroot/metcsurface/trunk/muleserver/lib
+svn+ssh://letourneau@developer.mitre.org/svnroot/metcsurface
+
+
+
+2010-05-06T13:20:47.612356Z
+607
+letourneau
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3bb94036-8b47-11de-ab9c-b4022e9e637b
+
+mule
+dir
+
+opt
+dir
+
+boot
+dir
+
+endorsed
+dir
+
+user
+dir
+

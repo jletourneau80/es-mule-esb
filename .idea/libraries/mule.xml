@@ -1,0 +1,47 @@
+<component name="libraryTable">
+  <library name="mule">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-module-ognl-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-jetty-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-quartz-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-module-scripting-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-servlet-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-module-pgp-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-module-jaas-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-module-spring-config-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-jbpm-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-multicast-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-module-spring-extras-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-module-sxc-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-module-client-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-ftp-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-udp-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-ssl-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-module-acegi-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-module-spring-security-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-stdio-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-xmpp-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-bpm-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-cxf-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-jms-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-tcp-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-file-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-core-2.2.1-tests.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-email-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-module-xml-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-http-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-jdbc-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-axis-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-rmi-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-vm-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-soap-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-module-builders-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-transport-ejb-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-module-management-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-core-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mule/mule-module-jbossts-2.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

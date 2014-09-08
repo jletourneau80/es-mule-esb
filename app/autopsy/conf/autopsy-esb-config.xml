@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesource.org/schema/mule/core/2.2"
+      xmlns:spring="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:file="http://www.mulesource.org/schema/mule/file/2.2"
+      xmlns:udp="http://www.mulesource.org/schema/mule/udp/2.2"
+      xmlns:tcp="http://www.mulesource.org/schema/mule/tcp/2.2"
+      xmlns:vm="http://www.mulesource.org/schema/mule/vm/2.2"
+      xmlns:stdio="http://www.mulesource.org/schema/mule/stdio/2.2"
+      xmlns:http="http://www.mulesource.org/schema/mule/http/2.2"   
+      xmlns:mulexml="http://www.mulesource.org/schema/mule/xml/2.2"
+      xmlns:jersey="http://www.mulesource.org/schema/mule/jersey/2.2"
+      xsi:schemaLocation="
+         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+         http://www.mulesource.org/schema/mule/core/2.2 http://www.mulesource.org/schema/mule/core/2.2/mule.xsd
+         http://www.mulesource.org/schema/mule/file/2.2 http://www.mulesource.org/schema/mule/file/2.2/mule-file.xsd
+         http://www.mulesource.org/schema/mule/udp/2.2 http://www.mulesource.org/schema/mule/udp/2.2/mule-udp.xsd
+         http://www.mulesource.org/schema/mule/tcp/2.2 http://www.mulesource.org/schema/mule/tcp/2.2/mule-tcp.xsd
+         http://www.mulesource.org/schema/mule/vm/2.2 http://www.mulesource.org/schema/mule/vm/2.2/mule-vm.xsd
+         http://www.mulesource.org/schema/mule/stdio/2.2 http://www.mulesource.org/schema/mule/stdio/2.2/mule-stdio.xsd
+         http://www.mulesource.org/schema/mule/http/2.2 http://www.mulesource.org/schema/mule/http/2.2/mule-http.xsd
+         http://www.mulesource.org/schema/mule/jersey/2.2 http://www.mulesource.org/schema/mule/jersey/2.2/mule-jersey.xsd
+         http://www.mulesource.org/schema/mule/xml/2.2 http://www.mulesource.org/schema/mule/xml/2.2/mule-xml.xsd">
+
+
+
+    <description>
+	Autopsy Server config for RSS and registration of Autopsy instances
+    </description>
+
+   
+
+    <interceptor-stack name="default">
+		<logging-interceptor />
+    </interceptor-stack>
+
+
+    <custom-transformer name="LoggingTransformer" class="com.basistech.autopsy.rules.LoggingTransformer"/>
+
+    <model name="AutopsyAtomPub">
+
+        <service name="AutopsyRegistrationService">
+            <inbound>
+                <inbound-endpoint address="jersey:http://localhost:8001/" synchronous="true"/>
+            </inbound>
+
+            <component class="com.basistech.autopsy.RegistrationService"/>
+        </service>
+
+        <service name="AutopsyRulesEngineService">
+            <inbound>
+                <inbound-endpoint address="jersey:http://localhost:8002/" synchronous="true"/>
+            </inbound>
+            <component class="com.basistech.autopsy.rules.RulesEngineService"/>
+        </service>
+  
+  </model>
+
+    <model name="ElasticSearchPublish">
+        <service name="HttpProxyService">
+            <inbound>
+                <http:inbound-endpoint address="http://localhost:8003" transformer-refs="LoggingTransformer" method="POST" synchronous="true"/>
+            </inbound>
+            <outbound>
+                <pass-through-router>
+                    <outbound-endpoint address="http://localhost:9202#[header:http.request]" synchronous="true"/>
+                </pass-through-router>
+            </outbound>
+        </service>
+    </model>
+
+</mule>

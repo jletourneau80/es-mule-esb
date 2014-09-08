@@ -1,0 +1,41 @@
+version: 1
+
+dn: ou=groups,dc=basis,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=basis,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=janeldap,ou=people,dc=basis,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Jane Ldap
+sn: Ldap
+uid: janeldap
+userPassword: janeldap
+displayName: Jane Ldap
+mail: janeldap@example.com
+
+dn: uid=admin,ou=people,dc=basis,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: John Ldap
+sn: Ldap
+uid: admin
+userPassword: admin
+displayName: John Ldap
+mail: johnldap@example.com
+
+dn: cn=user,ou=groups,dc=basis,dc=com
+objectclass: top
+objectclass: groupOfNames
+cn: user
+member: uid=admin,ou=people,dc=basis,dc=com

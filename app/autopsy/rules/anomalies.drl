@@ -1,0 +1,96 @@
+
+import com.basistech.autopsy.rules.LogEntry;
+import java.util.Date;
+
+global java.util.HashMap list
+
+rule "Game Start"
+    when
+        LogEntry(methodName=="initRocketEngine",$t:timeOccured)
+        exists LogEntry(methodName=="initRocketEngine")
+    then
+        list.put("Game Start",$t);
+end
+
+rule "Student applied Pulse Oximeter"
+    when
+        LogEntry(methodName=="BloodOxygenMeterEnabled" && currentValue=="True" && oldValue=="False",$t:timeOccured)
+        exists LogEntry(methodName=="BloodOxygenMeterEnabled" && currentValue=="True" && oldValue=="False")
+    then
+        list.put("Student applied Pulse Oximeter",$t);
+end
+
+rule "Tourniquet was selected"
+    when
+        LogEntry(methodName=="TourniquetEnabled" && currentValue=="True" && oldValue=="False",$t:timeOccured)
+        exists LogEntry(methodName=="TourniquetEnabled" && currentValue=="True" && oldValue=="False")
+    then
+        list.put("Tourniquet was selected",$t);
+end
+
+rule "Tourniquet was successfully applied Above the wound"
+    when
+        LogEntry(methodName=="TourniquetAboveEnabled" && currentValue=="True" && oldValue=="False",$t:timeOccured)
+        exists LogEntry(methodName=="TourniquetAboveEnabled" && currentValue=="True" && oldValue=="False")
+    then
+        list.put("Tourniquet was successfully applied Above the wound",$t);
+end
+
+
+rule "Neck brace was applied"
+    when
+        LogEntry(methodName=="NeckBraceEnabled" && currentValue=="True" && oldValue=="False",$t:timeOccured)
+        not LogEntry(methodName=="IntubationJawEnabled" && currentValue=="True" && oldValue=="False" && timeOccured<=$t)
+        not LogEntry(methodName=="IntubationStraightEnabled" && currentValue=="True" && oldValue=="False" && timeOccured<=$t)
+        not LogEntry(methodName=="IntubationEnabled" && currentValue=="True" && oldValue=="False" && timeOccured<=$t)
+        not LogEntry(methodName=="BagValveEnabled" && currentValue=="True" && oldValue=="False" && timeOccured<=$t)
+        exists LogEntry(methodName=="NeckBraceEnabled" && currentValue=="True" && oldValue=="False")
+
+    then
+        list.put("Neck brace was applied",$t);
+end
+
+rule "Jaw Thrust method was applied"
+    when
+        LogEntry(methodName=="IntubationJawEnabled" && currentValue=="True" && oldValue=="False", $t:timeOccured)
+        LogEntry(methodName=="NeckBraceEnabled" && currentValue=="True" && oldValue=="False" && timeOccured<=$t)
+        not LogEntry(methodName=="NeckBraceEnabled" && currentValue=="True" && oldValue=="False" && timeOccured>$t)
+        not LogEntry(methodName=="IntubationStraightEnabled" && currentValue=="True" && oldValue=="False" && timeOccured<=$t)
+        not LogEntry(methodName=="BagValveEnabled" && currentValue=="True" && oldValue=="False" && timeOccured<=$t)
+        exists LogEntry(methodName=="IntubationJawEnabled" && currentValue=="True" && oldValue=="False")
+        then
+        list.put("Jaw Thrust method was applied",$t);
+end
+
+rule "Straight blade was successfully inserted"
+    when
+        LogEntry(methodName=="IntubationStraightEnabled" && currentValue=="True" && oldValue=="False", $t:timeOccured)
+        LogEntry(methodName=="IntubationJawEnabled" && currentValue=="True" && oldValue=="False" && $x:timeOccured<=$t)
+        LogEntry(methodName=="NeckBraceEnabled" && currentValue=="True" && oldValue=="False" && timeOccured<=$t)
+        not LogEntry(methodName=="NeckBraceEnabled" && currentValue=="True" && oldValue=="False" && (timeOccured>$t || timeOccured>$x))
+        not LogEntry(methodName=="IntubationJawEnabled" && currentValue=="True" && oldValue=="False" && timeOccured>$t)
+        not LogEntry(methodName=="BagValveEnabled" && currentValue=="True" && oldValue=="False" && timeOccured<=$t)
+        exists LogEntry(methodName=="IntubationStraightEnabled" && currentValue=="True" && oldValue=="False")
+    then
+        list.put("Straight blade was successfully inserted",$t);
+end
+
+rule "Bag valve mask was applied"
+    when
+        LogEntry(methodName=="BagValveEnabled" && currentValue=="True" && oldValue=="False", $t:timeOccured)
+        LogEntry(methodName=="IntubationStraightEnabled" && currentValue=="True" && oldValue=="False" && $x:timeOccured<=$t)
+        LogEntry(methodName=="IntubationJawEnabled" && currentValue=="True" && oldValue=="False" && $y:timeOccured<=$t)
+        LogEntry(methodName=="NeckBraceEnabled" && currentValue=="True" && oldValue=="False" && $z:timeOccured<=$t)
+        not LogEntry(methodName=="NeckBraceEnabled" && currentValue=="True" && oldValue=="False" && (timeOccured>$t || timeOccured>$x || timeOccured>$y))
+        not LogEntry(methodName=="IntubationJawEnabled" && currentValue=="True" && oldValue=="False" && (timeOccured>$t || timeOccured>$x))
+        not LogEntry(methodName=="IntubationStraightEnabled" && currentValue=="True" && oldValue=="False" && timeOccured>$t)
+
+
+        exists LogEntry(methodName=="BagValveEnabled" && currentValue=="True" && oldValue=="False" )
+    then
+        list.put("Bag valve mask was applied",$t);
+end
+
+
+
+

@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>basis</groupId>
+  <artifactId>autopsy</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>Autopsy Analytics</name>
+  <url>http://maven.apache.org</url>
+    <properties>
+        <spring.version>3.0.5.RELEASE</spring.version>
+        <junit.version>4.11</junit.version>
+        <jdk.version>1.6</jdk.version>
+        <jettyVersion>7.2.0.v20101020</jettyVersion>
+    </properties>
+    <repositories>
+        <repository>
+            <id>webjars</id>
+            <url>http://webjars.github.com/m2</url>
+        </repository>
+    </repositories>
+
+  <build>
+    <finalName>autopsy-esb</finalName>
+      <resources>
+          <resource>
+              <directory>conf</directory>
+          </resource>
+          <resource>
+              <directory>rules</directory>
+          </resource>
+          <resource>
+              <directory>src/main/resources</directory>
+          </resource>
+      </resources>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-war-plugin</artifactId>
+              <configuration>
+                  <webXml>../../src/main/webapp/WEB-INF/web.xml</webXml>
+              </configuration>
+          </plugin>
+          <plugin>
+              <groupId>com.googlecode.addjars-maven-plugin</groupId>
+              <artifactId>addjars-maven-plugin</artifactId>
+              <version>1.0.5</version>
+              <executions>
+                  <execution>
+                      <goals>
+                          <goal>add-jars</goal>
+                      </goals>
+                      <configuration>
+                          <resources>
+                              <resource>
+                                  <directory>../../lib</directory>
+                              </resource>
+                          </resources>
+                      </configuration>
+                  </execution>
+              </executions>
+          </plugin>
+
+      </plugins>
+  </build>
+</project>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+    <display-name>Mule</display-name>
+    <description>Mule Web App Samples</description>
+
+    <!-- Classpath within the servlet context.  Mule will attempt to load config
+         files from here first, and then from the remaining classpath. -->
+    <context-param>
+        <param-name>org.mule.webapp.classpath</param-name>
+        <param-value>/WEB-INF/classes</param-value>
+    </context-param>
+
+    <context-param>
+        <!-- If using the SpringContextLoaderListener, use this param name -->
+        <!--<param-name>contextConfigLocation</param-name>-->
+	<!-- uncomment jmx-config.xml below if including mx4j jars -->
+        <param-name>org.mule.config</param-name>
+<!--           jmx-config.xml, -->
+        <param-value>
+            autopsy-esb-config.xml
+        </param-value>
+    </context-param>
+
+<!--    <listener>-->
+<!--        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>-->
+<!--    </listener>-->
+
+    <!--
+    To use a MuleXml configuration file use this context listener
+    -->
+    <listener>
+        <listener-class>org.mule.config.builders.MuleXmlBuilderContextListener</listener-class>
+    </listener>
+
+
+
+    <listener>
+        <listener-class>com.basistech.autopsy.SessionFactoryInitializer</listener-class>
+    </listener>
+
+
+  <!-- Define reference to the user database for looking up roles -->
+  <resource-env-ref>
+    <description>
+      Link to the UserDatabase instance from which we request lists of
+      defined role names.  Typically, this will be connected to the global
+      user database with a ResourceLink element in server.xml or the context
+      configuration file for the Manager web application.
+    </description>
+    <resource-env-ref-name>users</resource-env-ref-name>
+    <resource-env-ref-type>
+      org.apache.catalina.UserDatabase
+    </resource-env-ref-type>
+  </resource-env-ref>
+
+
+
+  <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <!--error-page>
+    <error-code>401</error-code>
+    <location>/401.jsp</location>
+  </error-page-->
+
+</web-app>

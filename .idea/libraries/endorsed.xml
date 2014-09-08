@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="endorsed">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/endorsed/xalan-2.7.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/endorsed/xercesImpl-2.9.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/endorsed/xml-apis-1.3.04.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/endorsed/xml-serializer-2.7.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

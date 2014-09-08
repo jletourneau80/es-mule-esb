@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="boot">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/boot/wrapper-3.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/boot/commons-cli-1.0-osgi.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/boot/jcl104-over-slf4j-1.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/boot/slf4j-log4j12-1.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/boot/slf4j-api-1.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/boot/mule-module-boot-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/boot/log4j-1.2.14.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

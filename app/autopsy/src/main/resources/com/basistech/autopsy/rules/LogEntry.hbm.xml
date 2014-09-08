@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.basistech.autopsy.rules">
+
+    <class name="LogEntry" table="log">
+        <id name="id" column="LogId">
+            <generator class="native"/>
+        </id>
+        <property name="Session"/>
+        <property name="Level"/>
+        <property name="TimeOccured" column="Date" type="timestamp" />
+        <property name="Logger"/>
+        <property name="ClassName" column="Class"/>
+        <property name="MethodName" column="Method"/>
+        <property name="currentValue" column="Value"/>
+        <property name="oldValue"/>
+        <property name="Message" column="Message"/>
+
+    </class>
+   
+
+</hibernate-mapping>
